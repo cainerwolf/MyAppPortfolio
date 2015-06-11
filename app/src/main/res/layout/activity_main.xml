@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:text="@string/spotify"
         android:id="@+id/buttonSpotifyStreamer"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="21dp"
         android:background="#F08C35"
         android:layout_below="@+id/editText"
         android:onClick="spotifyToast"

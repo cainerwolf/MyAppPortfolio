@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 import android.content.Context;
 import android.view.View;
+import android.widget.Button;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -39,43 +40,20 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void spotifyToast(View view) {
-        // Do something when the spotify button is clicked
-        doMyToast("This will launch my Spotify App!");
-    }
+    public void buttonToast(View view) {
+        // Gets the button that was clicked
+        Button button = (Button) view;
 
-    public void scoresToast(View view) {
-        // Do something when the scores button is clicked
-        doMyToast("This will launch my Scores App!");
-    }
+        // Create out toast text
+        CharSequence text = getString(R.string.launch) + button.getText() + "." ;
 
-    public void libraryToast(View view) {
-        // Do something when the library button is clicked
-        doMyToast("This will launch my Library App!");
-    }
-
-    public void bibToast(View view) {
-        // Do something when the build it bigger button is clicked
-        doMyToast("This will launch my Build It Bigger App!");
-    }
-
-    public void xyzToast(View view) {
-        // Do something when the xyz reader button is clicked
-        doMyToast("This will launch my XYZ Reader App!");
-    }
-
-    public void capstoneToast(View view) {
-        // Do something when the capstone button is clicked
-        doMyToast("This will launch my Capstone App!");
-    }
-
-    private void doMyToast(String toastString) {
-        // Display a Toast with toastString
         Context context = getApplicationContext();
-        CharSequence text = toastString;
+
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+
     }
+
 }

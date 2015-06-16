@@ -45,7 +45,7 @@ public class MainActivity extends ActionBarActivity {
         Button button = (Button) view;
 
         // Create out toast text
-        CharSequence text = getString(R.string.launch) + button.getText() + "." ;
+        CharSequence text = getString(R.string.launch) + button.getText() + "!" ;
 
         Context context = getApplicationContext();
 
